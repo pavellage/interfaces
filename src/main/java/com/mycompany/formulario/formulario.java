@@ -20,11 +20,11 @@ public class formulario extends javax.swing.JFrame {
     public formulario() {
         initComponents();
         getRootPane().setDefaultButton(entrar);
-        //estilos();
+        estilos();
     }
     public void estilos(){
      //getRootPaneSetDefaultButton(entrar);
-     
+     primero.putClientProperty("JTextField.placeholderText", "usuario");
     }
     
 
