@@ -5,6 +5,8 @@
 package com.mycompany.formulario;
 
 import java.awt.event.KeyEvent;
+import com.formdev.flatlaf.FlatClientProperties;
+import static javax.swing.SwingUtilities.getRootPane;
 
 /**
  *
@@ -17,7 +19,14 @@ public class formulario extends javax.swing.JFrame {
      */
     public formulario() {
         initComponents();
+        getRootPane().setDefaultButton(entrar);
+        //estilos();
     }
+    public void estilos(){
+     //getRootPaneSetDefaultButton(entrar);
+     
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,6 +41,7 @@ public class formulario extends javax.swing.JFrame {
         primero = new javax.swing.JTextField();
         segundo = new javax.swing.JTextField();
         tercero = new javax.swing.JTextField();
+        entrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,6 +61,8 @@ public class formulario extends javax.swing.JFrame {
 
         tercero.setText("jTextField3");
 
+        entrar.setText("jButton1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -58,10 +70,11 @@ public class formulario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(117, 117, 117)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(entrar)
                     .addComponent(tercero, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(segundo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(primero, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(212, Short.MAX_VALUE))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,7 +85,9 @@ public class formulario extends javax.swing.JFrame {
                 .addComponent(segundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(tercero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(entrar)
+                .addGap(21, 21, 21))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -90,15 +105,15 @@ public class formulario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void primeroKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_primeroKeyPressed
-       if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-           segundo.requestFocusInWindow();
-       }
+      // if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+       //    segundo.requestFocusInWindow();
+       //}
     }//GEN-LAST:event_primeroKeyPressed
 
     private void segundoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_segundoKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-           tercero.requestFocusInWindow();
-       }
+       // if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+       //    tercero.requestFocusInWindow();
+       //}
     }//GEN-LAST:event_segundoKeyPressed
 
     /**
@@ -137,6 +152,7 @@ public class formulario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton entrar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField primero;
     private javax.swing.JTextField segundo;
